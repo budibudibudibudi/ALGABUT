@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f3f2b40ec8ab44bb5c31ff497b572c, type: 3}
+  m_Name: buku
+  m_EditorClassIdentifier: 
+  name: buku
+  canbeused: 1
+  isstackable: 1
+  item: {fileID: 3463048995249294155, guid: 4536a8a07bd308946a507e92136d53a1, type: 3}
