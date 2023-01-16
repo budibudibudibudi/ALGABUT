@@ -78,9 +78,8 @@ public class gamemanage : MonoBehaviour
         tempcamera.SetActive(false); 
     }
 
-//skill area
-    public void skill1()
+    private void OnApplicationQuit()
     {
-
-    }    
+        PlayerPrefs.DeleteAll();
+    }
 }

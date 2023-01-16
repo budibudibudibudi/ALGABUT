@@ -128,20 +128,39 @@ public class playerscript : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         rb.velocity = new Vector2(x * speed * Time.fixedDeltaTime, y * speed * Time.fixedDeltaTime);
-        if (x > 0)
+        if (x > 0 && !facingright)
         {
-            transform.localEulerAngles = new Vector3(0, 180, 0);
-            playername.transform.localEulerAngles = new Vector3(0, 180, 0);
-            backpackscript.interactalert.transform.localEulerAngles = new Vector3(0, 180, 0);
-            backpackscript.interactalert.transform.localPosition = new Vector3(-1.2f, 1.2f, 0);
+            if(hunterweapon!=null)
+            {
+                transform.localEulerAngles = new Vector3(0, 0, 0);
+                playername.transform.localEulerAngles = new Vector3(0, 0, 0);
+                playername.transform.localPosition = new Vector2(playername.transform.localPosition.x * -1, playername.transform.localPosition.y);
+            }
+            else
+            {
+                transform.localEulerAngles = new Vector3(0, 180, 0);
+                playername.transform.localEulerAngles = new Vector3(0, 180, 0);
+                playername.transform.localPosition = new Vector2(playername.transform.localPosition.x * -1, playername.transform.localPosition.y);
+            }
+            facingright = !facingright;
         }
 
-        else if (x < 0)
+        else if (x < 0 && facingright)
         {
-            transform.localEulerAngles = new Vector3(0, 0, 0);
-            playername.transform.localEulerAngles = new Vector3(0, 0, 0);
-            backpackscript.interactalert.transform.localEulerAngles = new Vector3(0, 0, 0);
-            backpackscript.interactalert.transform.localPosition = new Vector3(1.2f, 1.2f, 0);
+            if(hunterweapon!= null)
+            {
+                transform.localEulerAngles = new Vector3(0, 180, 0);
+                playername.transform.localEulerAngles = new Vector3(0, 180, 0);
+                playername.transform.localPosition = new Vector2(playername.transform.localPosition.x * -1, playername.transform.localPosition.y);
+
+            }
+            else
+            {
+                transform.localEulerAngles = new Vector3(0, 0, 0);
+                playername.transform.localEulerAngles = new Vector3(0, 0, 0);
+                playername.transform.localPosition = new Vector2(playername.transform.localPosition.x * -1, playername.transform.localPosition.y);
+            }
+            facingright = !facingright;
         }
 
         if (x > 0 || x < 0 || y > 0 || y < 0)

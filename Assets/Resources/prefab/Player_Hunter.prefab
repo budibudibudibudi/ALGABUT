@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 8449682364154438289}
   - component: {fileID: 8449682364154438294}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: nama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -206,7 +206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.295723, y: -0.575202}
+  m_AnchoredPosition: {x: 3.33, y: -0.575202}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &8449682364154438289
@@ -809,7 +809,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1192,6 +1192,7 @@ MonoBehaviour:
   hunterweapon: {fileID: 8449682365631754433}
   shootpoint: {fileID: 8449682365920675695}
   phonecontroller: {fileID: 5500489532201599590}
+  backpackscript: {fileID: 0}
 --- !u!114 &8449682365631754433
 MonoBehaviour:
   m_ObjectHideFlags: 0
