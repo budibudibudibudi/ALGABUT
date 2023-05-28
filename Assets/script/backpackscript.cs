@@ -154,19 +154,19 @@ public class backpackscript : MonoBehaviour
     }
     public void refreshui()
     {
-        for (int i = 0; i < itembackpack.Length; i++)
-        {
-           try
-            {
-                itembackpack[i].GetComponent<Image>().sprite = item[i].getitem().item.GetComponent<SpriteRenderer>().sprite;
-                itembackpack[i].transform.GetChild(0).GetComponent<Text>().text = item[i].getstock().ToString();
-            }
-            catch
-            {
-                itembackpack[i].GetComponent<Image>().sprite = null;
-                itembackpack[i].transform.GetChild(0).GetComponent<Text>().text = " ";
-            }
-        }
+        //for (int i = 0; i < itembackpack.Length; i++)
+        //{
+        //   try
+        //    {
+        //        itembackpack[i].GetComponent<Image>().sprite = item[i].getitem().item.GetComponent<SpriteRenderer>().sprite;
+        //        itembackpack[i].transform.GetChild(0).GetComponent<Text>().text = item[i].getstock().ToString();
+        //    }
+        //    catch
+        //    {
+        //        itembackpack[i].GetComponent<Image>().sprite = null;
+        //        itembackpack[i].transform.GetChild(0).GetComponent<Text>().text = " ";
+        //    }
+        //}
     }
     public bool add(itemclass _item, int quantity)
     {
